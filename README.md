@@ -67,18 +67,65 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
+---
 
-----------------------------------
+# Commands used:
 
-### Commands used:
+### Create our application:
 
-# Create our application:
 npx create-react-app learnstorybook-design-system<br/>
 cd learnstorybook-design-system
 
-# Create a new repository on Github and give him this name
+### Create a new repository on Github and give him this name
+
 learnstorybook-design-system
 
-# Add the remote to your git repo and push the repo
-git remote add origin https://github.com/AlexAxis/learnstorybook-design-system.git
+### Add the remote to your git repo and push the repo
+
+git remote add origin https://github.com/AlexAxis/learnstorybook-design-system.git<br/>
 git push -u origin master
+
+### Delete src and download pre-made components (using svn (Subversion) to download a folder of files from Github)
+
+rm -rf src<br/>
+svn export https://github.com/chromaui/learnstorybook-design-system/tags/download-1/src
+
+### Add dependencies
+
+yarn add prop-types styled-components polished
+
+### Download design tokens to the repository
+
+svn export https://github.com/chromaui/learnstorybook-design-system/tags/download-2/src/shared src/shared
+
+### Add Prettier (a consistent syntax and standardize formatting)
+
+yarn add --dev prettier
+
+### Add Storybook (“Storybook is a powerful frontend workshop environment tool that allows teams to design, build, and organize UI components (and even full screens!) without getting tripped up over business logic and plumbing.” – Brad Frost, Author of Atomic Design))
+
+npx -p @storybook/cli sb init<br/>
+yarn storybook
+
+### Add addon Storysource (shows the currently selected story code in the addon panel so that we can copy/paste it)
+
+yarn add --dev @storybook/addon-storysource<br/>
+(insert in the .storybook/main.js -> "@storybook/addon-storysource",)
+
+### Add addon Knobs (allows to edit the properties via the UI)
+
+yarn add --dev @storybook/addon-knobs<br/>
+(insert in the .storybook/main.js -> '@storybook/addon-knobs',)
+
+### Connect to CircleCI
+
+(Add a .circleci directory at the top level and create a config.yml file inside of it.)
+version: 2
+jobs:
+build:
+docker: - image: circleci/node:10.13
+working_directory: ~/repo
+steps: - checkout - restore_cache:
+keys: - v1-dependencies-{{ checksum "package.json" }} - v1-dependencies- - run: yarn install - save_cache:
+paths: - node_modules
+key: v1-dependencies-{{ checksum "package.json" }} - run: yarn test
