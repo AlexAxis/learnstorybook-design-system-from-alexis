@@ -66,3 +66,19 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+----------------------------------
+
+### Commands used:
+
+# Create our application:
+npx create-react-app learnstorybook-design-system<br/>
+cd learnstorybook-design-system
+
+# Create a new repository on Github and give him this name
+learnstorybook-design-system
+
+# Add the remote to your git repo and push the repo
+git remote add origin https://github.com/AlexAxis/learnstorybook-design-system.git
+git push -u origin master
