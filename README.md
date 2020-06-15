@@ -117,7 +117,7 @@ yarn add --dev @storybook/addon-storysource<br/>
 yarn add --dev @storybook/addon-knobs<br/>
 (insert in the .storybook/main.js -> '@storybook/addon-knobs',)
 
-### Connect to CircleCI
+### Connect to CircleCI (Continous Integration to test your code before a git push)
 
 (Add a .circleci directory at the top level and create a config.yml file inside of it.)
 version: 2
@@ -129,3 +129,18 @@ steps: - checkout - restore_cache:
 keys: - v1-dependencies-{{ checksum "package.json" }} - v1-dependencies- - run: yarn install - save_cache:
 paths: - node_modules
 key: v1-dependencies-{{ checksum "package.json" }} - run: yarn test
+
+### Connect to Netlify (deploy)
+
+Build command: yarn storybook-build<br/>
+Publish directory: storybook-static
+
+### add the storybook-static directory to our .gitignore file
+
+storybook-static
+
+### Git commands
+
+(-a Tell the command to automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected)<br/>
+(-m Use the given message as the commit message)<br/>
+git commit -am “ignore storybook static”<br/>
