@@ -143,4 +143,8 @@ storybook-static
 
 (-a Tell the command to automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected)<br/>
 (-m Use the given message as the commit message)<br/>
+(but it didn't work: "with -a does not make sense")
 git commit -am “ignore storybook static”<br/>
+git checkout -b improve-button<br/>
+git commit -am “make Button pop”<br/>
+git push -u origin improve-button
