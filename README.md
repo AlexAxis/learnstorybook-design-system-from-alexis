@@ -192,3 +192,13 @@ parameters: { docs: { storyDescription: '4 sizes are supported.' } },
 stories: ['../src/**/*.stories.(js|mdx)'],<br/>
 (create src/Avatar.stories.mdx)<br/>
 (copy paste from here http://localhost:9009/?path=/docs/design-system-avatar--sizes)
+
+### Publishing only the Docks from Storybook
+
+(insert in the package.json)<br/>
+{
+"scripts": {
+"build-storybook-docs": "build-storybook -s public --docs"
+}
+}<br/>
+(now go to Netlify and publish to deploy the docs site)
