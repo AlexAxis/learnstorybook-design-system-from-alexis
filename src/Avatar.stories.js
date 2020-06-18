@@ -8,42 +8,22 @@ export default {
 
   parameters: {
     component: Avatar,
+
+    //--- this will add the extra documentation (human touch)
+    componentSubtitle: "Displays an image that represents a user or organization",
   },
 }
 
 //--- with the addon Docs, the order of appearance is by each "export const" in this file,
 //--- in which the first is going to be shown before the propTypes in the Docs tab.
-
-export const standard = () => (
-  <Avatar
-    size="large"
-    username="Tom Coleman"
-    src="https://avatars2.githubusercontent.com/u/132554"
-  />
-)
+export const standard = () => <Avatar size="large" username="Tom Coleman" src="https://avatars2.githubusercontent.com/u/132554" />
 
 export const sizes = () => (
   <div>
-    <Avatar
-      size="large"
-      username="Tom Coleman"
-      src="https://avatars2.githubusercontent.com/u/132554"
-    />
-    <Avatar
-      size="medium"
-      username="Tom Coleman"
-      src="https://avatars2.githubusercontent.com/u/132554"
-    />
-    <Avatar
-      size="small"
-      username="Tom Coleman"
-      src="https://avatars2.githubusercontent.com/u/132554"
-    />
-    <Avatar
-      size="tiny"
-      username="Tom Coleman"
-      src="https://avatars2.githubusercontent.com/u/132554"
-    />
+    <Avatar size="large" username="Tom Coleman" src="https://avatars2.githubusercontent.com/u/132554" />
+    <Avatar size="medium" username="Tom Coleman" src="https://avatars2.githubusercontent.com/u/132554" />
+    <Avatar size="small" username="Tom Coleman" src="https://avatars2.githubusercontent.com/u/132554" />
+    <Avatar size="tiny" username="Tom Coleman" src="https://avatars2.githubusercontent.com/u/132554" />
   </div>
 )
 
@@ -69,23 +49,19 @@ export const large = () => (
   <div>
     <Avatar loading size="large" />
     <Avatar size="large" username="Tom Coleman" />
-    <Avatar
-      size="large"
-      username="Tom Coleman"
-      src="https://avatars2.githubusercontent.com/u/132554"
-    />
+    <Avatar size="large" username="Tom Coleman" src="https://avatars2.githubusercontent.com/u/132554" />
   </div>
 )
 
 export const knobs = () => (
-  <Avatar
-    loading={boolean("Loading")}
-    size={select("Size", ["tiny", "small", "medium", "large"])}
-    username="Dominic Nguyen"
-    src="https://avatars2.githubusercontent.com/u/263385"
-  />
+  <Avatar loading={boolean("Loading")} size={select("Size", ["tiny", "small", "medium", "large"])} username="Dominic Nguyen" src="https://avatars2.githubusercontent.com/u/263385" />
 )
 
 knobs.story = {
   decorators: [withKnobs],
+}
+
+//--- It will add a comment to this specific story
+sizes.story = {
+  parameters: { docs: { storyDescription: "4 sizes are supported." } },
 }

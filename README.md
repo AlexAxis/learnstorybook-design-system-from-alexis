@@ -158,7 +158,7 @@ import { withA11y } from "@storybook/addon-a11y";
 addDecorator(withA11y);
 )
 
-### Add addon Docs (Generate documentation. It mostly checks the propTypes of the component)
+### Add addon Docs (Generate documentation. It mostly checks the propTypes that are on the component)
 
 yarn add --dev @storybook/addon-docs<br/>
 (insert in the .storybook/main.js -> {
@@ -167,3 +167,21 @@ options: {
 configureJSX: true,
 },
 },)
+
+### Extending documentation (with some human touch: "why, when and how" for other developers)
+
+(write in the src/Avatar.stories.js)<br/>
+export default {
+title: 'Design System|Avatar',
+
+parameters: {
+component: Avatar,
+componentSubtitle: 'Displays an image that represents a user or organization',
+},
+};<br/>
+(and now write in the src/Avatar.js)<br/>
+"CHECK ALL THE BIG COMMENTS THAT ARE WRITTEN IN THAT FILE"<br/>
+(and now write in the src/Avatar.stories.js)<br/>
+sizes.story = {
+parameters: { docs: { storyDescription: '4 sizes are supported.' } },
+};
