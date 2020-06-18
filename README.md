@@ -148,3 +148,12 @@ git commit -am “ignore storybook static”<br/>
 git checkout -b improve-button<br/>
 git commit -am “make Button pop”<br/>
 git push -u origin improve-button
+
+### Add addon Accessibility (a tool for verifying web accessibility standards (WCAG) in realtime.)
+
+yarn add --dev @storybook/addon-a11y
+(insert in the .storybook/main.js -> "@storybook/addon-a11y",)
+(insert decorator in the .storybook/preview.js
+import { withA11y } from "@storybook/addon-a11y";
+addDecorator(withA11y);
+)
