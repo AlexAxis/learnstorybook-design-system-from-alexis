@@ -1,14 +1,14 @@
-import React, { Fragment } from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import { darken, rgba } from "polished";
-import { color, typography } from "./shared/styles";
-import { easing } from "./shared/animation";
+import React, { Fragment } from "react"
+import PropTypes from "prop-types"
+import styled from "styled-components"
+import { darken, rgba } from "polished"
+import { color, typography } from "./shared/styles"
+import { easing } from "./shared/animation"
 
 const Text = styled.span`
   display: inline-block;
   vertical-align: top;
-`;
+`
 
 const Loading = styled.span`
   position: absolute;
@@ -16,7 +16,7 @@ const Loading = styled.span`
   left: 0;
   right: 0;
   opacity: 0;
-`;
+`
 
 const APPEARANCES = {
   PRIMARY: "primary",
@@ -25,17 +25,21 @@ const APPEARANCES = {
   SECONDARY_OUTLINE: "secondaryOutline",
   TERTIARY: "tertiary",
   OUTLINE: "outline",
-};
+}
 
 const SIZES = {
   SMALL: "small",
   MEDIUM: "medium",
-};
+}
 
 const StyledButton = styled.button`
   border: 10px solid red;
   font-size: 20px;
   // border: 0;
+
+
+
+  
   border-radius: 3em;
   cursor: pointer;
   display: inline-block;
@@ -321,9 +325,9 @@ const StyledButton = styled.button`
         }
       `};
 
-`;
+`
 
-const ButtonLink = StyledButton.withComponent("a");
+const ButtonLink = StyledButton.withComponent("a")
 
 const applyStyle = (ButtonWrapper) => {
   return (
@@ -333,8 +337,8 @@ const applyStyle = (ButtonWrapper) => {
         <ButtonWrapper {...rest} />
       )
     )
-  );
-};
+  )
+}
 
 export function Button({
   isDisabled,
@@ -350,24 +354,24 @@ export function Button({
       <Text>{children}</Text>
       {isLoading && <Loading>{loadingText || "Loading..."}</Loading>}
     </Fragment>
-  );
+  )
 
   const StyledButtonWrapper = React.useMemo(() => applyStyle(ButtonWrapper), [
     ButtonWrapper,
-  ]);
+  ])
 
-  let SelectedButton = StyledButton;
+  let SelectedButton = StyledButton
   if (ButtonWrapper) {
-    SelectedButton = StyledButtonWrapper;
+    SelectedButton = StyledButtonWrapper
   } else if (isLink) {
-    SelectedButton = ButtonLink;
+    SelectedButton = ButtonLink
   }
 
   return (
     <SelectedButton isLoading={isLoading} disabled={isDisabled} {...props}>
       {buttonInner}
     </SelectedButton>
-  );
+  )
 }
 
 Button.propTypes = {
@@ -393,7 +397,7 @@ Button.propTypes = {
   containsIcon: PropTypes.bool,
   size: PropTypes.oneOf(Object.values(SIZES)),
   ButtonWrapper: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
+}
 
 Button.defaultProps = {
   isLoading: false,
@@ -405,4 +409,4 @@ Button.defaultProps = {
   containsIcon: false,
   size: SIZES.MEDIUM,
   ButtonWrapper: undefined,
-};
+}

@@ -1,11 +1,11 @@
-import React from "react";
-import { Badge } from "./Badge";
-import { Icon } from "./Icon";
+import React from "react"
+import { Badge } from "./Badge"
+import { Icon } from "./Icon"
 
 export default {
   title: "Design System|Badge",
   component: Badge,
-};
+}
 
 export const allBadges = () => (
   <div>
@@ -19,25 +19,25 @@ export const allBadges = () => (
       with icon
     </Badge>
   </div>
-);
+)
 
 allBadges.story = {
   name: "all badges",
-};
+}
 
-export const positive = () => <Badge status="positive">Positive</Badge>;
-export const negative = () => <Badge status="negative">Negative</Badge>;
-export const warning = () => <Badge status="warning">Warning</Badge>;
-export const neutral = () => <Badge status="neutral">Neutral</Badge>;
-export const error = () => <Badge status="error">Error</Badge>;
+export const positive = () => <Badge status="positive">Positive</Badge>
+export const negative = () => <Badge status="negative">Negative</Badge>
+export const warning = () => <Badge status="warning">Warning</Badge>
+export const neutral = () => <Badge status="neutral">Neutral</Badge>
+export const error = () => <Badge status="error">Error</Badge>
 
 export const withIcon = () => (
   <Badge status="warning">
     <Icon icon="check" inline />
     with icon
   </Badge>
-);
+)
 
 withIcon.story = {
   name: "with icon",
-};
+}

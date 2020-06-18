@@ -143,7 +143,7 @@ storybook-static
 
 (-a Tell the command to automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected)<br/>
 (-m Use the given message as the commit message)<br/>
-(but it didn't work: "with -a does not make sense")
+(but it didn't work: "with -a does not make sense")<br/>
 git commit -am “ignore storybook static”<br/>
 git checkout -b improve-button<br/>
 git commit -am “make Button pop”<br/>
@@ -151,9 +151,19 @@ git push -u origin improve-button
 
 ### Add addon Accessibility (a tool for verifying web accessibility standards (WCAG) in realtime.)
 
-yarn add --dev @storybook/addon-a11y
-(insert in the .storybook/main.js -> "@storybook/addon-a11y",)
+yarn add --dev @storybook/addon-a11y<br/>
+(insert in the .storybook/main.js -> "@storybook/addon-a11y",)<br/>
 (insert decorator in the .storybook/preview.js
 import { withA11y } from "@storybook/addon-a11y";
 addDecorator(withA11y);
 )
+
+### Add addon Docs (Generate documentation. It mostly checks the propTypes of the component)
+
+yarn add --dev @storybook/addon-docs<br/>
+(insert in the .storybook/main.js -> {
+name: '@storybook/addon-docs',
+options: {
+configureJSX: true,
+},
+},)

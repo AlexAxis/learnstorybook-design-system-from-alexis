@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 
-import { Avatar } from "./Avatar";
-import { withKnobs, select, boolean } from "@storybook/addon-knobs";
+import { Avatar } from "./Avatar"
+import { withKnobs, select, boolean } from "@storybook/addon-knobs"
 
 export default {
   title: "Design System|Avatar",
@@ -9,7 +9,10 @@ export default {
   parameters: {
     component: Avatar,
   },
-};
+}
+
+//--- with the addon Docs, the order of appearance is by each "export const" in this file,
+//--- in which the first is going to be shown before the propTypes in the Docs tab.
 
 export const standard = () => (
   <Avatar
@@ -17,7 +20,7 @@ export const standard = () => (
     username="Tom Coleman"
     src="https://avatars2.githubusercontent.com/u/132554"
   />
-);
+)
 
 export const sizes = () => (
   <div>
@@ -42,7 +45,7 @@ export const sizes = () => (
       src="https://avatars2.githubusercontent.com/u/132554"
     />
   </div>
-);
+)
 
 export const initials = () => (
   <div>
@@ -51,7 +54,7 @@ export const initials = () => (
     <Avatar username="Kyle Suss" />
     <Avatar username="Michael Shilman" />
   </div>
-);
+)
 
 export const loading = () => (
   <div>
@@ -60,7 +63,7 @@ export const loading = () => (
     <Avatar size="small" loading />
     <Avatar size="tiny" loading />
   </div>
-);
+)
 
 export const large = () => (
   <div>
@@ -72,7 +75,7 @@ export const large = () => (
       src="https://avatars2.githubusercontent.com/u/132554"
     />
   </div>
-);
+)
 
 export const knobs = () => (
   <Avatar
@@ -81,8 +84,8 @@ export const knobs = () => (
     username="Dominic Nguyen"
     src="https://avatars2.githubusercontent.com/u/263385"
   />
-);
+)
 
 knobs.story = {
   decorators: [withKnobs],
-};
+}
