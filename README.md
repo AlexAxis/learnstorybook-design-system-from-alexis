@@ -185,3 +185,10 @@ componentSubtitle: 'Displays an image that represents a user or organization',
 sizes.story = {
 parameters: { docs: { storyDescription: '4 sizes are supported.' } },
 };
+
+### Supercharge documentation with Markdown/MDX (I DON'T LIKE THIS)
+
+(change in the .storybook/main.js)<br/>
+stories: ['../src/**/*.stories.(js|mdx)'],<br/>
+(create src/Avatar.stories.mdx)<br/>
+(copy paste from here http://localhost:9009/?path=/docs/design-system-avatar--sizes)

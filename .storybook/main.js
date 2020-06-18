@@ -1,5 +1,7 @@
 module.exports = {
-  stories: ["../src/**/*.stories.js"],
+  // automatically import all files ending in *.stories.js|mdx
+  stories: ["../src/Intro.stories.mdx", "../src/**/*.stories.(js|mdx)"],
+  //stories: ["../src/**/*.stories.js"],
   addons: [
     "@storybook/preset-create-react-app",
     "@storybook/addon-actions",
