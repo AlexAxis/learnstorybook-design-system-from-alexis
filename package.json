@@ -1,6 +1,6 @@
 {
   "name": "learnstorybook-design-system-by-alexis",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
