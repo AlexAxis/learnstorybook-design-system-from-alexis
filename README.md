@@ -360,3 +360,11 @@ Now every time you merge a PR to master, it will automatically publish a new ver
 (more Auto features: https://github.com/intuit/auto)
 
 ### Then we import the Design System into our app
+
+### EXTRA:
+
+-> How many commits does the project have?
+
+```bash
+git shortlog -sn
+```
