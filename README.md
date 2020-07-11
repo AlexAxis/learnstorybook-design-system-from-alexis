@@ -361,10 +361,28 @@ Now every time you merge a PR to master, it will automatically publish a new ver
 
 ### Then we import the Design System into our app
 
-### EXTRA:
+# EXTRA:
 
 -> How many commits does the project have?
 
 ```bash
 git shortlog -sn
 ```
+
+### Some modifications in package.json
+
+yarn add --dev babel-plugin-transform-es2015-modules-umd
+yarn add --dev babel-core
+yarn add --dev babel-preset-es2015
+yarn add --dev babel-preset-react
+yarn add --dev babel-preset-stage-2
+yarn add --dev babel-polyfill
+yarn add --dev babel-eslint
+
+"babel": {
+"presets": [
+"react-app"
+]
+},
+
+"@babel/cli": "^7.10.1",
