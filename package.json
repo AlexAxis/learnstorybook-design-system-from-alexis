@@ -66,5 +66,8 @@
   "main": "dist/index.js",
   "repository": "https://github.com/AlexAxis/learnstorybook-design-system.git",
   "author": "Alexis Sousa <alexis-sousa@hotmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@AlexAxis"
+  }
 }
