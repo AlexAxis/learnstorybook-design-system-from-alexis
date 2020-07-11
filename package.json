@@ -1,5 +1,5 @@
 {
-  "name": "learnstorybook-design-system-from-alexis",
+  "name": "@aleaxis/learnstorybook-design-system-from-alexis",
   "version": "0.5.0",
   "private": false,
   "dependencies": {
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "cross-env BABEL_ENV=production babel src -d dist",
+    "build": "cross-env BABEL_ENV=production babel src -d dist --ignore \"**/*.test.js\" --ignore \"**/*.stories.js\"",
     "buildbabel": "rimraf dist && NODE_ENV=production babel src --out-dir dist --copy-files",
     "buildgit": "NODE_ENV=production babel src -d dist --extensions \".js,.jsx,.ts,.tsx\" --ignore \"**/*.test.js\" --ignore \"**/*.stories.js\"",
     "prepublishca": "babel --plugins transform-es2015-modules-umd src --ignore \"**/*.test.js\" --ignore \"**/*.stories.js\" --out-dir ./dist",
@@ -64,10 +64,10 @@
   },
   "description": "Learn Storybook design system",
   "main": "dist/index.js",
-  "repository": "https://github.com/AlexAxis/learnstorybook-design-system.git",
+  "repository": "https://github.com/AlexAxis/learnstorybook-design-system-from-alexis.git",
   "author": "Alexis Sousa <alexis-sousa@hotmail.com>",
   "license": "MIT",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/AlexAxis"
+    "registry": "https://npm.pkg.github.com/"
   }
 }
