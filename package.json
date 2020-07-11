@@ -64,7 +64,7 @@
   },
   "description": "Learn Storybook design system",
   "main": "dist/index.js",
-  "repository": "https://github.com/alexaxis/learnstorybook-design-system-from-alexis.git",
+  "repository": "git://github.com/alexaxis/learnstorybook-design-system-from-alexis.git",
   "author": "Alexis Sousa <alexis-sousa@hotmail.com>",
   "license": "MIT",
   "publishConfig": {
