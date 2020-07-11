@@ -68,6 +68,6 @@
   "author": "Alexis Sousa <alexis-sousa@hotmail.com>",
   "license": "MIT",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@AlexAxis"
+    "registry": "https://npm.pkg.github.com/AlexAxis"
   }
 }
