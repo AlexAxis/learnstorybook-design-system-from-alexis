@@ -390,3 +390,8 @@ yarn add --dev babel-eslint
 yarn add --dev babel-loader
 yarn remove babel-preset-es2015
 yarn remove babel-loader
+
+yarn remove babel-eslint
+// "babel-eslint": "^6.0.2",
+
+yarn add --dev babel-eslint
