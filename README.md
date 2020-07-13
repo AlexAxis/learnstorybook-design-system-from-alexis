@@ -386,3 +386,7 @@ yarn add --dev babel-eslint
 },
 
 "@babel/cli": "^7.10.1",
+
+yarn add --dev babel-loader
+yarn remove babel-preset-es2015
+yarn remove babel-loader
